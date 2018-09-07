@@ -1,8 +1,12 @@
-function addition(a,b)
-{
-	return a + b;
-}
+var today = new Date()
+var day = today.getUTCDay();
 
-let add = addition(5,5);
+var nameOfDay = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
-console.log(add);
+//console.log("Today is: " + nameOfDay[day] + ".");
+
+var hour = today.getHours();
+var minutes = today.getMinutes();
+var seconds = today.getSeconds();
+
+console.log(hour + " " + minutes + " " + seconds);
