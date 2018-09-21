@@ -1,28 +1,29 @@
-function dayAndTime()
+function currentDate()
 {
-	var today = new Date()
-	var day = today.getUTCDay();
+	var today = new Date();
+	
+	var daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+	var day = today.getDate();
+	var month = today.getMonth() + 1;
+	var year = today.getFullYear();
 
-	var nameOfDay = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-
-	var thisDate = nameOfDay[day];
-
-	//console.log(+ ".");
-
-	var hour = today.getHours();
-	var minutes = today.getMinutes();
-	var seconds = today.getSeconds();
-
-	if(hour > 12)
+	if(day < 10)
 	{
-		var pm = "Today is " + thisDate + ": " + (hour - 12) + ":" + minutes + ":" + seconds + " PM";
-		return pm;
+		day = "0" + today.getDate();
 	}
-	else
+	//else
+
+
+	if(month < 10)
 	{
-		var am = "Today is " + thisDate + ": " + hour + ":" + minutes + ":" + seconds + " AM";
-		return am;
+		month = "0" + (today.getMonth() + 1);
 	}
+	
+
+	var date = month + "-" + day + "-" + year;
+
+	return date;
+
 }
 
-console.log(dayAndTime());
+console.log(currentDate());
