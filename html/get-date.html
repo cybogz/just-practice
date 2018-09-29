@@ -4,12 +4,16 @@
 	<head>
 		<title> Today's Date </title>
 		<script src="/home/cyrus/Documents/just-practice/javascript/get-date.js"></script>
+		<script src="/home/cyrus/Documents/just-practice/javascript/get-time.js"></script>
 	</head>
 	<body>
 
-		<p> This is todays current date and time </p>
-		<p id = "print"> </p>
-		<script> document.getElementById("print").innerHTML = get_date() </script>
+		<h2> This is todays current date and time </h2>
+		<p id = "date", style="color:red"> </p>
+		<p id = "time"> </p>
+		
+		<script> document.getElementById("date").innerHTML = get_date() </script>
+		<script> document.getElementById("time").innerHTML = get_time() </script>
 
 	</body>
 

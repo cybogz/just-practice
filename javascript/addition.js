@@ -2,7 +2,6 @@ function currentDate()
 {
 	var today = new Date();
 	
-	var daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 	var day = today.getDate();
 	var month = today.getMonth() + 1;
 	var year = today.getFullYear();
@@ -11,8 +10,6 @@ function currentDate()
 	{
 		day = "0" + today.getDate();
 	}
-	//else
-
 
 	if(month < 10)
 	{
